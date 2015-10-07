@@ -1,28 +1,31 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Virtual Demo Room">
+  <ion-nav-buttons side="secondary">
+    <a class="button button-icon icon ion-search"></a>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <img ng-src="../img/logo.png" height="75%" style="vertical-align: middle">
+    Virtual Demo Room
+  </ion-nav-title>
   <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
+    <div><img ng-src="../img/topic.jpg" width="100%"/></div>
+    <div class="list">
+      <a ng-repeat="item in solutions" href="#/{{item.id}}" class="item item-thumbnail-left">
+        <img ng-src="{{item.soln_icon}}" alt="ICON"/>
+
+        <div class="row">
+          <div class="col">
+            <h2>{{item.soln_name}}</h2>
+            <img ng-src="../img/stars.png"/>
+            <h4>{{item.industry}}&nbsp;&nbsp;{{item.size}}&nbsp;M</h4>
+          </div>
+          <div class="col col-25 col-center ">
+            <button class="button button-small button-stable">
+              download
+            </button>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
+      </a>
     </div>
   </ion-content>
+
 </ion-view>

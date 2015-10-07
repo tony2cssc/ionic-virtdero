@@ -1,0 +1,205 @@
+{
+  "solutions": [
+    {
+      "id": 1,
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590730,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 5,
+      "soln_icon": "../img/appicon.png",
+      "soln_name": "HP Smart Event",
+      "soln_id": "S-MBL-01",
+      "size": 16.5
+    },
+    {
+      "id": 2,
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General",
+        "CME"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 5,
+      "soln_icon": "../img/appicon.png",
+      "soln_name": "HP Smart Event",
+      "soln_id": "S-MBL-02",
+      "size": 16.5
+    },
+    {
+      "id": 3,
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General",
+        "Health Care"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 8,
+      "soln_icon": "../img/appicon.png",
+      "soln_name": "HP Smart Event",
+      "soln_id": "S-MBL-03",
+      "size": 16.5
+    },
+    {
+      "id": 4,
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 6,
+      "soln_icon": "../img/appicon.png",
+      "soln_name": "HP Smart Event",
+      "soln_id": "S-MBL-04",
+      "size": 16.5
+    },
+    {
+      "id": 5,
+      "app_version": "1.0",
+      "size": 16.5,
+      "avbl_on_devices": [
+        "iphone",
+        "ipad",
+        "apple watch",
+        "android",
+        "android pad"
+      ],
+      "avbl_on_oses": [
+        "ios",
+        "android",
+        "windows phone"
+      ],
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 17,
+        "month": 9,
+        "seconds": 6,
+        "time": 1443964626882,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "description": "惠普公司（Hewlett-Packard Development Company, L.P.，简称HP）总部位于美国加利福尼亚州的帕罗奥多（Palo Alto），是一家全球性的资讯科技公司，主要专注于打印机、数码影像、软件、计算机与资讯服务等业务。惠普（HP）是世界最大的信息科技（IT）公司之一，成立于1939年，总部位于美国加利福尼亚州帕洛阿尔托市。惠普下设三大业务集团：信息产品集团、打印及成像系统集团和企业计算及专业服务集团.",
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General",
+        "CME",
+        "Sports",
+        "Amusement"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 17,
+        "month": 9,
+        "seconds": 6,
+        "time": 1443964626882,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 10,
+      "soln_docs": [
+        "doc/abc.doc",
+        "doc/abc.doc"
+      ],
+      "soln_icon": "../img/appicon.png",
+      "soln_id": "S-MBL-05",
+      "soln_name": "HP Event",
+      "soln_images": [
+        "img/pin.jpg",
+        "img/welcome.jpg"
+      ],
+      "soln_videos": [
+        "video/1.mp4",
+        "video/1.mp4"
+      ]
+    }
+  ]
+}
