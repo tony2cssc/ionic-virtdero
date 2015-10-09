@@ -1,0 +1,41 @@
+
+<!--
+    This template loads for the 'tab.friend-detail' state (app.js)
+    'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+    The FriendsCtrl pulls data from the Friends service (service.js)
+    The Friends service returns an array of friend data
+  -->
+<ion-view view-title="{{solution.soln_name}}"> <ion-content
+	class="padding">
+<div class="list">
+	<div class="item item-thumbnail-left">
+		<img ng-src="./img/{{solution.soln_icon}}">
+		<div class="row">
+			<div class="col">
+				<h2>{{solution.soln_name}} &nbsp;|&nbsp; {{solution.industry}}</h2>
+
+				<img ng-src="../img/stars.png" />
+				<h4>{{solution.industry}}&nbsp;&nbsp;{{solution.size}}&nbsp;M</h4>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="tabs-striped tabs-stable tabs-top">
+	<div class="tabs" style="margin-top: 80px;">
+		<a class="tab-item" href=""> Instruction </a> <a class="tab-item"
+			href=""> Comments(20) </a>
+	</div>
+	<div style="margin-top:100px;">
+		<p>Update Time:{{solution.modified_at}}</p>
+		<p>Tab:</p>
+		<p>Solution Owner:</p>
+		<p>Instruction:XXXXXXXXXXXXX</p>
+		<img ng-src="../img/stars.png" width="50%" /><img
+			ng-src="../img/stars.png" width="50%" />
+
+	</div>
+</div>
+<button class="button button-positive">Download</button>
+
+</ion-content> </ion-view>
