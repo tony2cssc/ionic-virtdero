@@ -29,7 +29,7 @@
         "year": 115
       },
       "rating": 5,
-      "soln_icon": "../img/appicon.png",
+      "soln_icon": "appicon.png",
       "soln_name": "HP Smart Event",
       "soln_id": "S-MBL-01",
       "size": 16.5
@@ -64,7 +64,7 @@
         "year": 115
       },
       "rating": 5,
-      "soln_icon": "../img/appicon.png",
+      "soln_icon": "appicon.png",
       "soln_name": "HP Smart Event",
       "soln_id": "S-MBL-02",
       "size": 16.5
@@ -99,7 +99,7 @@
         "year": 115
       },
       "rating": 8,
-      "soln_icon": "../img/appicon.png",
+      "soln_icon": "appicon.png",
       "soln_name": "HP Smart Event",
       "soln_id": "S-MBL-03",
       "size": 16.5
@@ -133,7 +133,7 @@
         "year": 115
       },
       "rating": 6,
-      "soln_icon": "../img/appicon.png",
+      "soln_icon": "appicon.png",
       "soln_name": "HP Smart Event",
       "soln_id": "S-MBL-04",
       "size": 16.5
@@ -189,7 +189,7 @@
         "doc/abc.doc",
         "doc/abc.doc"
       ],
-      "soln_icon": "../img/appicon.png",
+      "soln_icon": "appicon.png",
       "soln_id": "S-MBL-05",
       "soln_name": "HP Event",
       "soln_images": [
