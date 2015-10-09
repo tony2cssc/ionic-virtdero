@@ -1,7 +1,7 @@
 angular.module('starter.services', ['ngResource'])
 
   .factory('Solutions', ['$resource', function($resource) {
-    return $resource('http://localhost:3000/solutions/:solnId')
+    return $resource('https://stormy-refuge-7104.herokuapp.com/solutions/:solnId')
   }])
 
   .factory('Chats', function () {
