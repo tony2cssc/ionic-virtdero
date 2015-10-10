@@ -5,6 +5,18 @@ angular.module('starter.controllers', [])
   }])
 
   .controller('DashDetailCtrl', function ($scope, $stateParams, Solutions) {
+	  $scope.more = {'show':true};
+	  $scope.less = {'show':false};
+	   $scope.show_more = function () {
+          $scope.more.show = !$scope.more.show;
+		  $scope.less = {'show':true};
+		  more_less(true);
+        };
+		 $scope.show_less = function () {
+          $scope.less.show = !$scope.less.show;
+		  $scope.more = {'show':true};
+		  more_less(false);
+        };
 	 $scope.solution = Solutions.get({solnId: $stateParams.id});
   })
   
@@ -32,3 +44,13 @@ angular.module('starter.controllers', [])
       enableFriends: true
     };
   });
+
+
+function more_less(flag){
+	if(flag){
+		document.getElementById('description').style.whiteSpace ="normal"
+		}else{
+			document.getElementById('description').style.whiteSpace ="nowrap"
+			}
+	
+	}

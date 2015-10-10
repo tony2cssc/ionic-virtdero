@@ -15,18 +15,26 @@
 				<h2>{{solution.soln_name}} &nbsp;|&nbsp; {{solution.industry}}</h2>
 
 				<img ng-src="../img/stars.png" />
-				<h4>{{solution.industry}}&nbsp;&nbsp;{{solution.size}}&nbsp;M</h4>
+				<h4 id="description">{{solution.description}}&nbsp;&nbsp;{{solution.size}}&nbsp;M</h4>
+				<a ng-show='more.show' ng-click="show_more()"> More</a><a
+					ng-show='less.show' ng-click="show_less()">Less</a>
 			</div>
 		</div>
 
 	</div>
 </div>
+
 <div class="tabs-striped tabs-stable tabs-top">
-	<div class="tabs" style="margin-top: 80px;">
-		<a class="tab-item" href=""> Instruction </a> <a class="tab-item"
-			href=""> Comments(20) </a>
+	<div class="tabs ins_com">
+		<a class="tab-item" href="">
+			Instruction </a>
+			<a class="tab-item" href="">
+				Comments(20) </a>
+			</div>
+		</div>
 	</div>
-	<div style="margin-top:100px;">
+	</div>
+	<div class="ins_content">
 		<p>Update Time:{{solution.modified_at}}</p>
 		<p>Tab:</p>
 		<p>Solution Owner:</p>
@@ -35,7 +43,7 @@
 			ng-src="../img/stars.png" width="50%" />
 
 	</div>
-</div>
-<button class="button button-positive">Download</button>
-
+	<div id="download_wrap">
+		<button class="button button-positive">Download</button>
+	</div>
 </ion-content> </ion-view>
