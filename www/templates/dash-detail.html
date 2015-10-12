@@ -6,8 +6,8 @@
     The Friends service returns an array of friend data
   -->
 <ion-view view-title="{{solution.soln_name}}"> <ion-content
-	class="padding">
-<div class="list list_item">
+	class="padding" >
+<div class="list list_item " >
 	<div class="item item-avatar1">
 		<img ng-src="./img/{{solution.soln_icon}}">
 		<div class="row detail_row">
@@ -22,14 +22,14 @@
 
 	</div>
 </div>
-
+        
 <div class="line"></div>
 
 <div class="ins_content">
 	<div class="img_show">
-	<img ng-src="../img/photo-show1.jpg" /><img
-		ng-src="../img/photo-show2.jpg" /><img
-		ng-src="../img/photo-show1.jpg" />
+	<div class="img_list"><img ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
+		ng-src="../img/photo-show2.jpg"/></div><div class="img_list"><img
+		ng-src="../img/photo-show1.jpg"/></div>
 </div>
 	<div class="title">Description:<a ng-show='more.show' ng-click="show_more()" id="down_img"></a><a
 		ng-show='less.show' ng-click="show_less()" id="up_img"></a></div>	

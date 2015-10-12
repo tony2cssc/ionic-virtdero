@@ -84,4 +84,8 @@
 .img_show{
 	overflow:hidden;
 	height:430px;
+	width:150%;
+}
+.img_list{
+	float:left;
 }
