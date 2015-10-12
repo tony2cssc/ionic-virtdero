@@ -1,32 +1,87 @@
 /* Empty. Add your own CSS if you like */
 /* dash-detail page */
+
+.list_item{
+	margin-left:-10px;
+	margin-right:-10px;
+}
+.list_item .item{
+	border:none;
+	padding:24px 26px 30px 20px;
+}
+.detail_row{
+	padding-left:141px;
+}
+.item-avatar1 > img:first-child{
+	width:116px;
+	height:116px;
+	position:absolute;
+}
+.line{
+	border-top:1px #d5d5d5 solid;
+	margin-bottom:28px;
+}
+.ins_content img{
+	padding-right:30px;
+}
 #download_wrap{
 	text-align:center;
 	margin-top:40px;
+	margin-bottom:32px;
+
 }
 .ins_com{
 	width:100%;
 }
-.tab_item{
-	width:50%;
-}
+
 .ins_content{
 	margin-left:10px;
-	margin-top:100px;
+	margin-top:30px;
 }
-.ins_com .tab_item{
-	font-size:20px;
-	border:1px #D9D9D9 solid;
-	border-right:none;
-	float:left;
-	height:50px;
-	line-height:50px;
-	text-align:center;
+.title{
+	color:#09B1DD;
+	font-weight:bold;
+	font-size:30pt;
+	margin-top:26px;
+	margin-bottom:26px;
+	}
+.title_c{
+	font-size:24pt;
+	color:#787777;
+	font-weight:bold;
 }
-.ins_com .tab_item:first-child{
-	border-left:none;
+.button_d{
+	color: #09B1DD;
+	background-color:#ffffff;
+	border:2px  #09B1DD solid;
+	width: 130px;
+    height: 46px;
 }
-.ins_com .tab_item.activated{
-	color:#0DADEB;
-	border-bottom:2px #0DADEB solid;
+#description{
+	    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#down_img,#up_img{
+	width:30px;
+	height:18px;
+	float:right;
+	margin-right:15px;
+}
+#down_img{
+	background:url(../img/down.png) no-repeat ;	
+}
+#up_img{
+	background:url(../img/up.png) no-repeat ;
+}
+.col_d{
+	text-align:right;
+}
+#email{
+	color: #09B1DD;
+	text-decoration:underline;
+}
+.img_show{
+	overflow:hidden;
+	height:430px;
 }

@@ -7,43 +7,68 @@
   -->
 <ion-view view-title="{{solution.soln_name}}"> <ion-content
 	class="padding">
-<div class="list">
-	<div class="item item-thumbnail-left">
+<div class="list list_item">
+	<div class="item item-avatar1">
 		<img ng-src="./img/{{solution.soln_icon}}">
-		<div class="row">
+		<div class="row detail_row">
 			<div class="col">
-				<h2>{{solution.soln_name}} &nbsp;|&nbsp; {{solution.industry}}</h2>
-
+				<h2>{{solution.soln_name}}</h2>
+				<h3>{{solution.industry}}</h3>
 				<img ng-src="../img/stars.png" />
-				<h4 id="description">{{solution.description}}&nbsp;&nbsp;{{solution.size}}&nbsp;M</h4>
-				<a ng-show='more.show' ng-click="show_more()"> More</a><a
-					ng-show='less.show' ng-click="show_less()">Less</a>
+				<h3>Solution Owner: <a id="email">e-mail@xxxx.com</a></h3>
+
 			</div>
 		</div>
 
 	</div>
 </div>
 
-<div>
-	<div class="ins_com">
-		<div class="tab_item activated">
-			Instruction </div>
-			<div class="tab_item">
-				Comments(20) </div>
+<div class="line"></div>
+
+<div class="ins_content">
+	<div class="img_show">
+	<img ng-src="../img/photo-show1.jpg" /><img
+		ng-src="../img/photo-show2.jpg" /><img
+		ng-src="../img/photo-show1.jpg" />
+</div>
+	<div class="title">Description:<a ng-show='more.show' ng-click="show_more()" id="down_img"></a><a
+		ng-show='less.show' ng-click="show_less()" id="up_img"></a></div>	
+	<h4 id="description">{{solution.description}}</h4>
+
+	<div class="line"></div>
+	<div class="title">Documents:</div>
+	<div class="list">
+		<div class="row">
+			<div class="col">
+				<img ng-src="../img/book.jpg" />
+			</div>
+			<div class="col col-center">Document Full Name</div>
+			<div class="col col-center col_d">
+				<button class="button button_d">Download</button>
 			</div>
 		</div>
 	</div>
-	</div>
-	<div class="ins_content">
-		<p>Update Time:{{solution.modified_at}}</p>
-		<p>Tab:</p>
-		<p>Solution Owner:</p>
-		<p>Instruction:XXXXXXXXXXXXX</p>
-		<img ng-src="../img/stars.png" width="50%" /><img
-			ng-src="../img/stars.png" width="50%" />
+	<div class="line"></div>
 
+	<div class="list">
+		<div class="row">
+			<div class="col">
+				<img ng-src="../img/book.jpg" />
+			</div>
+			<div class="col col-center">Document Full Name</div>
+			<div class="col col-center col_d">
+				<button class="button button_d">Download</button>
+			</div>
+		</div>
 	</div>
-	<div id="download_wrap">
-		<button class="button button-positive">Download</button>
-	</div>
+
+	<div class="line"></div>
+
+	<span class="title">Update Time:</span><span class="title_c">
+		2015-9-10</span>
+</div>
+
+<div id="download_wrap">
+	<button class="button button-positive">Download&nbsp;&nbsp;({{solution.size}}MB)</button>
+</div>
 </ion-content> </ion-view>
