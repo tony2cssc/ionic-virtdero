@@ -12,7 +12,7 @@
 		<div class="row detail_row">
 			<div class="col">
 				<h2>{{solution.soln_name}}</h2>
-				<h3>{{solution.industry}}</h3>
+				<h3><span ng-repeat="indus in solution.industry">{{indus}}&nbsp;&nbsp;</span></h3>
 				<img ng-src="../img/stars.png" />
 				<h3>Solution Owner: <a id="email">e-mail@xxxx.com</a></h3>
 
