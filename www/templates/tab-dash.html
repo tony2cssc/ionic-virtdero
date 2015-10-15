@@ -1,33 +1,35 @@
 <ion-view view-title="Virtual Demo Room">
   <ion-nav-buttons side="secondary">
       <a> <input type="search" placeholder="Search"></a>
-    <a class="button button-icon icon ion-search" ></a>
-      
+    <a class="button button-icon icon ion-search" ></a>    
   </ion-nav-buttons>
   <ion-nav-title>
     <img ng-src="./img/logo.png" height="75%" style="vertical-align: middle">
     Virtual Demo Room
+
   </ion-nav-title>
+
   <ion-content class="padding">
     <div><img ng-src="./img/topic.jpg" width="100%"/></div>
     <div class="list">
-      <a ng-repeat="item in solutions " href="#/tab/dash/{{item.id}}" class="item item-thumbnail-left" type="item-text-wrap">
-        <img ng-src="./img/{{item.soln_icon}}" alt="ICON"/>
+        <div ng-repeat="item in solutions ">
+            <a  href="#/tab/dash/{{item.id}}" class="item item-thumbnail-left" type="item-text-wrap">
+                <img ng-src="./img/{{item.soln_icon}}" alt="ICON" />
+                <div class="row">
+                    <div class="col">
+                        <h2>{{item.soln_name}}</h2>
+                        <img ng-src="../img/stars.png" />
+                        <h4><span ng-repeat="indus in item.industry">{{indus}}&nbsp;&nbsp;</span></h4>
+                    </div>
 
-        <div class="row">
-          <div class="col">
-            <h2>{{item.soln_name}}</h2>       
-            <img ng-src="../img/stars.png"/>
-              <h4><span ng-repeat="indus in item.industry">{{indus}}&nbsp;&nbsp;</span></h4>
-          </div>
-          <div class="col col-25 col-center">
-            <button class="button button-small button-stable">
-              download
-            </button>
-              
-          </div>
+                </div>
+            </a>
+            <div >
+                <button class="button button-small button-stable" ng-click=" ">
+                    download
+                </button>
+            </div>
         </div>
-      </a>
     </div>
   </ion-content>
 
