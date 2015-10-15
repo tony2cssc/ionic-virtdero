@@ -17,7 +17,9 @@ angular.module('starter.controllers', [])
 		  $scope.more = {'show':true};
 		  more_less(false);
         };
+		
 	 $scope.solution = Solutions.get({solnId: $stateParams.id});
+	 flexslider_show();
   })
   
   .controller('ChatsCtrl', function ($scope, Chats) {
