@@ -12,11 +12,17 @@
 		<img ng-src="./img/{{solution.soln_icon}}">
 		<div class="row detail_row">
 			<div class="col">
-				<h2>{{solution.soln_name}}</h2>
+				<h2>{{solution.soln_name}} </h2>
 				<h3>
-					<span ng-repeat="indus in solution.industry">{{indus}}&nbsp;&nbsp;</span>
+					<span ng-repeat="indus in solution.industry">{{indus}}   <span
+					ng-if ="indus != solution.industry[solution.industry.length-1]">,</span>&nbsp;&nbsp;</span>
 				</h3>
-				<img ng-src="../img/stars.png" />
+				<span ng-switch on="solution.rating"> <span
+					ng-switch-when="10"><img ng-src="../img/stars.png" /></span> <span
+					ng-switch-when="5"><img ng-src="../img/stars1.png" /></span> <span
+					ng-switch-when="8"><img ng-src="../img/stars5.png" /></span> <span
+					ng-switch-when="6"><img ng-src="../img/stars2.png" /></span>
+				</span>
 				<h3>
 					Solution Owner: <a id="email">e-mail@xxxx.com</a>
 				</h3>
@@ -42,6 +48,7 @@
 		ng-src="../img/photo-show1.jpg"/></div>
         </div>
 </div> -->
+<!-- 	<div ng-if="solution.soln_images.length > 0" on-finish-render-filters></div> -->
 	<div class="flexslider carousel">
 		<ul class="slides">
 			<li><img src="../img/photo-show1.jpg" /></li>
@@ -58,36 +65,42 @@
 			id="down_img"></a><a ng-show='less.show' ng-click="show_less()"
 			id="up_img"></a>
 	</div>
-	<h4 id="description">{{solution.description}}</h4>
-
+	<h4 id="description">{{solution.description}}</h4><br/>
+ 	<h4>OSES:<span ng-repeat="ose in solution.avbl_on_oses">{{ose}}   <span
+					ng-if ="ose != solution.avbl_on_oses[solution.avbl_on_oses.length-1]">,</span>&nbsp;&nbsp;</span></h4>
+    <h4>Devices:<span ng-repeat="dev in solution.avbl_on_devices">{{dev}}   <span
+					ng-if ="dev != solution.avbl_on_devices[solution.avbl_on_devices.length-1]">,</span>&nbsp;&nbsp;</span></h4>
+    <h4>Supported Language:</h4>
 	<div class="line"></div>
-	<div class="title">Documents:</div>
-	<div class="list">
+	<div class="title" ng-if="solution.soln_docs.length > 0 || solution.soln_videos.length > 0">Documents: </div>
+	<div class="list" ng-repeat="doc in solution.soln_docs">
 		<div class="row">
 			<div class="col">
 				<img ng-src="../img/book.jpg" class="book_s" />
 			</div>
-			<div class="col col-center">Document Full Name</div>
+			<div class="col col-center">{{doc}}</div>
 			<div class="col col-center col_d">
 				<button class="button button_d">Download</button>
 			</div>
 		</div>
+			<div class="line"></div>
 	</div>
-	<div class="line"></div>
 
-	<div class="list">
+
+	<div class="list" ng-repeat="video in solution.soln_videos">
 		<div class="row">
 			<div class="col">
 				<img ng-src="../img/book.jpg" class="book_s" />
 			</div>
-			<div class="col col-center">Document Full Name</div>
+			<div class="col col-center">{{video}}</div>
 			<div class="col col-center col_d">
 				<button class="button button_d">Download</button>
 			</div>
 		</div>
+		
+	<div class="line"></div>
 	</div>
 
-	<div class="line"></div>
 
 	<span class="title">Update Time:</span><span class="title_c">
 		2015-9-10</span>

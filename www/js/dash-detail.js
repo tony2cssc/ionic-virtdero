@@ -1,3 +1,44 @@
+angular.module('starter.dash.detail', []).controller('DashDetailCtrl',
+		function($scope, $stateParams, Solutions) {
+			$scope.more = {
+				'show' : true
+			};
+			$scope.less = {
+				'show' : false
+			};
+			$scope.show_more = function() {
+				$scope.more.show = !$scope.more.show;
+				$scope.less = {
+					'show' : true
+				};
+				more_less(true);
+			};
+			$scope.show_less = function() {
+				$scope.less.show = !$scope.less.show;
+				$scope.more = {
+					'show' : true
+				};
+				more_less(false);
+			};
+
+			$scope.solution = Solutions.get({
+				solnId : $stateParams.id
+			});
+			flexslider_show();
+/*			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+
+			});*/
+
+		})
+
+function more_less(flag) {
+	if (flag) {
+		document.getElementById('description').style.whiteSpace = "normal"
+	} else {
+		document.getElementById('description').style.whiteSpace = "nowrap"
+	}
+
+}
 
 function flexslider_show() {
 	var $window = $(window), flexslider;
@@ -10,6 +51,7 @@ function flexslider_show() {
 		itemWidth : 115,
 		itemMargin : 5,
 		move : 1,
+		slideshow : true,
 		minItems : getGridSize(), // use function to pull in initial value
 		maxItems : getGridSize(), // use function to pull in initial value
 		start : function(slider) {
