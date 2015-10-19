@@ -1,6 +1,8 @@
+
+<link rel="stylesheet" type="text/css" href="../js/lib/flexslider.css" />
 <ion-view view-title="Virtual Demo Room">
   <ion-nav-buttons side="secondary">
-      <a> <input type="search" placeholder="Search"></a>
+      
     <a class="button button-icon icon ion-search" ></a>    
   </ion-nav-buttons>
   <ion-nav-title>
@@ -18,8 +20,14 @@
                 <div class="row">
                     <div class="col">
                         <h2>{{item.soln_name}}</h2>
-                        <img ng-src="../img/stars.png" />
+                        <!--<img ng-src="../img/stars.png" />-->
                         <h4><span ng-repeat="indus in item.industry">{{indus}}&nbsp;&nbsp;</span></h4>
+                        <span ng-switch on="item.rating">
+                            <span ng-switch-when="10"><img ng-src="../img/stars.png" /></span> 
+                            <span ng-switch-when="5"><img ng-src="../img/stars1.png" /></span>
+                            <span ng-switch-when="8"><img ng-src="../img/stars5.png" /></span>
+                            <span ng-switch-when="6"><img ng-src="../img/stars2.png" /></span>
+                        </span>
                     </div>
 
                 </div>
@@ -28,6 +36,7 @@
                 <button class="button button-small button-stable button_download_dash" ng-click=" ">
                     download
                 </button>
+                
             </div>
         </div>
     </div>
