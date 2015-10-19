@@ -24,12 +24,22 @@ angular.module('starter.dash.detail', []).controller('DashDetailCtrl',
 			$scope.solution = Solutions.get({
 				solnId : $stateParams.id
 			});
-			flexslider_show();
-/*			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+				flexslider_show();
+			});
 
-			});*/
-
-		})
+		}).directive('onFinishRender', function($timeout) {
+	return {
+		restrict : 'A',
+		link : function(scope, element, attr) {
+			if (scope.$last === true) {
+				$timeout(function() {
+					scope.$emit(attr.onFinishRender);
+				});
+			}
+		}
+	}
+});
 
 function more_less(flag) {
 	if (flag) {

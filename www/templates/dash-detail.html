@@ -12,10 +12,11 @@
 		<img ng-src="./img/{{solution.soln_icon}}">
 		<div class="row detail_row">
 			<div class="col">
-				<h2>{{solution.soln_name}} </h2>
+				<h2>{{solution.soln_name}}</h2>
 				<h3>
-					<span ng-repeat="indus in solution.industry">{{indus}}   <span
-					ng-if ="indus != solution.industry[solution.industry.length-1]">,</span>&nbsp;&nbsp;</span>
+					<span ng-repeat="indus in solution.industry">{{indus}} <span
+						ng-if="indus != solution.industry[solution.industry.length-1]">,</span>&nbsp;&nbsp;
+					</span>
 				</h3>
 				<span ng-switch on="solution.rating"> <span
 					ng-switch-when="10"><img ng-src="../img/stars.png" /></span> <span
@@ -35,29 +36,13 @@
 <div class="line"></div>
 
 <div class="ins_content">
-	<!-- <div class="img_wrap" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwiperight()">
-	<div class="img_show">
-	<div class="img_list"><img ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show2.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div><div class="img_list"><img
-		ng-src="../img/photo-show1.jpg"/></div>
-        </div>
-</div> -->
-<!-- 	<div ng-if="solution.soln_images.length > 0" on-finish-render-filters></div> -->
-	<div class="flexslider carousel">
-		<ul class="slides">
-			<li><img src="../img/photo-show1.jpg" /></li>
-			<li><img src="../img/photo-show2.jpg" /></li>
-			<li><img src="../img/photo-show1.jpg" /></li>
-			<li><img src="../img/photo-show2.jpg" /></li>
-			<li><img src="../img/photo-show1.jpg" /></li>
-			<li><img src="../img/photo-show2.jpg" /></li>
-		</ul>
+	<div ng-if="solution.soln_images.length > 0">
+		<div class="flexslider carousel">
+			<ul class="slides">
+				<li ng-repeat="image in solution.soln_images"
+					on-finish-render="ngRepeatFinished"><img ng-src="./{{image}}" /></li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="title">
@@ -65,14 +50,29 @@
 			id="down_img"></a><a ng-show='less.show' ng-click="show_less()"
 			id="up_img"></a>
 	</div>
-	<h4 id="description">{{solution.description}}</h4><br/>
- 	<h4>OSES:<span ng-repeat="ose in solution.avbl_on_oses">{{ose}}   <span
-					ng-if ="ose != solution.avbl_on_oses[solution.avbl_on_oses.length-1]">,</span>&nbsp;&nbsp;</span></h4>
-    <h4>Devices:<span ng-repeat="dev in solution.avbl_on_devices">{{dev}}   <span
-					ng-if ="dev != solution.avbl_on_devices[solution.avbl_on_devices.length-1]">,</span>&nbsp;&nbsp;</span></h4>
-    <h4>Supported Language:</h4>
+	<h4 id="description">{{solution.description}}</h4>
+	<br />
+	<h4>
+		OSES:<span ng-repeat="ose in solution.avbl_on_oses">{{ose}} <span
+			ng-if="ose != solution.avbl_on_oses[solution.avbl_on_oses.length-1]">,</span>&nbsp;&nbsp;
+		</span>
+	</h4>
+	<h4>
+		Devices:<span ng-repeat="dev in solution.avbl_on_devices">{{dev}}
+			<span
+			ng-if="dev != solution.avbl_on_devices[solution.avbl_on_devices.length-1]">,</span>&nbsp;&nbsp;
+		</span>
+	</h4>
+	<h4>
+		Supported Language:<span ng-repeat="language in solution.languages">{{language}}
+			<span
+			ng-if="language != solution.languages[solution.languages.length-1]">,</span>&nbsp;&nbsp;
+		</span>
+	</h4>
 	<div class="line"></div>
-	<div class="title" ng-if="solution.soln_docs.length > 0 || solution.soln_videos.length > 0">Documents: </div>
+	<div class="title"
+		ng-if="solution.soln_docs.length > 0 || solution.soln_videos.length > 0">Documents:
+	</div>
 	<div class="list" ng-repeat="doc in solution.soln_docs">
 		<div class="row">
 			<div class="col">
@@ -83,7 +83,7 @@
 				<button class="button button_d">Download</button>
 			</div>
 		</div>
-			<div class="line"></div>
+		<div class="line"></div>
 	</div>
 
 
@@ -97,8 +97,8 @@
 				<button class="button button_d">Download</button>
 			</div>
 		</div>
-		
-	<div class="line"></div>
+
+		<div class="line"></div>
 	</div>
 
 
