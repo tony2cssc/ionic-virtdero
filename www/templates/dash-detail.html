@@ -13,9 +13,9 @@
 		<div class="row detail_row">
 			<div class="col">
 				<h2>{{solution.soln_name}}</h2>
-				<h3>
+				<h3 class="title_h">
 					<span ng-repeat="indus in solution.industry">{{indus}} <span
-						ng-if="indus != solution.industry[solution.industry.length-1]">,</span>&nbsp;&nbsp;
+						ng-if="indus != solution.industry[solution.industry.length-1]">,</span>
 					</span>
 				</h3>
 				<span ng-switch on="solution.rating"> <span
@@ -24,7 +24,7 @@
 					ng-switch-when="8"><img ng-src="../img/stars5.png" /></span> <span
 					ng-switch-when="6"><img ng-src="../img/stars2.png" /></span>
 				</span>
-				<h3>
+				<h3 class="title_h">
 					Solution Owner: <a id="email">e-mail@xxxx.com</a>
 				</h3>
 			</div>
@@ -51,22 +51,21 @@
 			id="up_img"></a>
 	</div>
 	<h4 id="description">{{solution.description}}</h4>
-	<br />
-	<h4>
+	<h4 class="title_h">
 		OSES:<span ng-repeat="ose in solution.avbl_on_oses">{{ose}} <span
-			ng-if="ose != solution.avbl_on_oses[solution.avbl_on_oses.length-1]">,</span>&nbsp;&nbsp;
+			ng-if="ose != solution.avbl_on_oses[solution.avbl_on_oses.length-1]">,</span>
 		</span>
 	</h4>
-	<h4>
+	<h4 class="title_h">
 		Devices:<span ng-repeat="dev in solution.avbl_on_devices">{{dev}}
 			<span
-			ng-if="dev != solution.avbl_on_devices[solution.avbl_on_devices.length-1]">,</span>&nbsp;&nbsp;
+			ng-if="dev != solution.avbl_on_devices[solution.avbl_on_devices.length-1]">,</span>
 		</span>
 	</h4>
-	<h4>
+	<h4 class="title_h">
 		Supported Language:<span ng-repeat="language in solution.languages">{{language}}
 			<span
-			ng-if="language != solution.languages[solution.languages.length-1]">,</span>&nbsp;&nbsp;
+			ng-if="language != solution.languages[solution.languages.length-1]">,</span>
 		</span>
 	</h4>
 	<div class="line"></div>
