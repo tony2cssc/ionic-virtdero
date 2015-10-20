@@ -5,11 +5,12 @@
     The Friends service returns an array of friend data
   -->
 <link rel="stylesheet" type="text/css" href="../js/lib/flexslider.css" />
-<ion-view view-title="{{solution.soln_name}}"> <ion-content
+<ion-view view-title="{{solution.soln_name}}">
+ <ion-content
 	class="padding">
 <div class="list list_item ">
 	<div class="item item-avatar1">
-		<img ng-src="./img/{{solution.soln_icon}}">
+		<img ng-src="{{solution.soln_icon}}">
 		<div class="row detail_row">
 			<div class="col">
 				<h2>{{solution.soln_name}}</h2>
@@ -19,10 +20,12 @@
 					</span>
 				</h3>
 				<span ng-switch on="solution.rating"> <span
-					ng-switch-when="10"><img ng-src="../img/stars.png" /></span> <span
-					ng-switch-when="5"><img ng-src="../img/stars1.png" /></span> <span
-					ng-switch-when="8"><img ng-src="../img/stars5.png" /></span> <span
-					ng-switch-when="6"><img ng-src="../img/stars2.png" /></span>
+					ng-switch-when="5"><img ng-src="../img/stars.png" /></span> <span
+					ng-switch-when="4"><img ng-src="../img/stars4.png" /></span> <span
+					ng-switch-when="3"><img ng-src="../img/stars3.png" /></span> <span
+					ng-switch-when="2"><img ng-src="../img/stars2.png" /></span><span
+					ng-switch-when="1"><img ng-src="../img/stars1.png" /></span><span
+					ng-switch-when="0"><img ng-src="../img/stars5.png" /></span>
 				</span>
 				<h3 class="title_h">
 					Solution Owner: <a id="email">e-mail@xxxx.com</a>
@@ -40,7 +43,7 @@
 		<div class="flexslider carousel">
 			<ul class="slides">
 				<li ng-repeat="image in solution.soln_images"
-					on-finish-render="ngRepeatFinished"><img ng-src="./{{image}}" /></li>
+					on-finish-render="ngRepeatFinished"><img ng-src="{{image}}" /></li>
 			</ul>
 		</div>
 	</div>
@@ -50,16 +53,16 @@
 			id="down_img"></a><a ng-show='less.show' ng-click="show_less()"
 			id="up_img"></a>
 	</div>
-	<h4 id="description">{{solution.description}}</h4>
+	<h4 id="description" ng-bind-html="solution.description"></h4>
 	<h4 class="title_h">
-		OSES:<span ng-repeat="ose in solution.avbl_on_oses">{{ose}} <span
-			ng-if="ose != solution.avbl_on_oses[solution.avbl_on_oses.length-1]">,</span>
+		OSES:<span ng-repeat="ose in solution.platforms">{{ose}} <span
+			ng-if="ose != solution.platforms[solution.platforms.length-1]">,</span>
 		</span>
 	</h4>
 	<h4 class="title_h">
-		Devices:<span ng-repeat="dev in solution.avbl_on_devices">{{dev}}
+		Devices:<span ng-repeat="dev in solution.device_type">{{dev}}
 			<span
-			ng-if="dev != solution.avbl_on_devices[solution.avbl_on_devices.length-1]">,</span>
+			ng-if="dev != solution.device_type[solution.device_type.length-1]">,</span>
 		</span>
 	</h4>
 	<h4 class="title_h">
@@ -77,7 +80,7 @@
 			<div class="col">
 				<img ng-src="../img/book.jpg" class="book_s" />
 			</div>
-			<div class="col col-center">{{doc}}</div>
+			<div class="col col-center">{{doc.name}}</div>
 			<div class="col col-center col_d">
 				<button class="button button_d">Download</button>
 			</div>
@@ -91,7 +94,7 @@
 			<div class="col">
 				<img ng-src="../img/book.jpg" class="book_s" />
 			</div>
-			<div class="col col-center">{{video}}</div>
+			<div class="col col-center">{{video.name}}</div>
 			<div class="col col-center col_d">
 				<button class="button button_d">Download</button>
 			</div>
@@ -106,6 +109,6 @@
 </div>
 
 <div id="download_wrap">
-	<button class="button button-positive">Download&nbsp;&nbsp;({{solution.size}}MB)</button>
+	<button class="button button-positive">Download&nbsp;&nbsp;(<span ng-if="currentPlatform =='android'">{{solution.size.android}}</span><span ng-if="currentPlatform =='ios'">{{solution.size.iphone}}</span>MB)</button>
 </div>
 </ion-content> </ion-view>

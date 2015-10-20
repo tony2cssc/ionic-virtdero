@@ -75,7 +75,7 @@ function flexslider_show() {
 		var gridSize = getGridSize();
 
 		flexslider.vars.minItems = gridSize;
-		// flexslider.vars.maxItems = gridSize;
+		flexslider.vars.maxItems = gridSize;
 	});
 
 }

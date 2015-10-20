@@ -1,6 +1,8 @@
 angular.module('starter.controllers', [])
 
-  .controller('DashCtrl', ['$scope', 'Solutions',function ($scope, Solutions) {
+  .controller('DashCtrl', ['$scope', 'Solutions','$rootScope',function ($scope, Solutions,$rootScope) {
+	 var currentPlatform = ionic.Platform.platform();
+	 $rootScope.currentPlatform = currentPlatform;
     $scope.solutions = Solutions.query();
   }])
   
