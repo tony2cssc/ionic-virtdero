@@ -87,6 +87,16 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers',
         controller: 'AccountCtrl'
       }
     }
+  })
+
+  .state('tab.seach', {
+      url: '/seach',
+      views: {
+          'tab-dash': {
+              templateUrl: 'templates/tab-seach.html',
+            
+          }
+      }
   });
 
   // if none of the above states are matched, use this as the fallback
