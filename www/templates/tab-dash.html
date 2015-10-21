@@ -16,17 +16,21 @@
     <div class="list">
         <div ng-repeat="item in solutions ">
             <a  href="#/tab/dash/{{item.id}}" class="item item-thumbnail-left" type="item-text-wrap">
-                <img ng-src="./img/{{item.soln_icon}}" alt="ICON" />
+                <img ng-src="{{item.soln_icon}}" alt="ICON"  ng-if="item.soln_icon != 'appicon.png' "/>
+                <img ng-src="./img/appicon.png" alt="ICON"  ng-if="item.soln_icon == 'appicon.png' "/>
                 <div class="row">
                     <div class="col">
                         <h2>{{item.soln_name}}</h2>
                         <!--<img ng-src="../img/stars.png" />-->
                         <h4><span ng-repeat="indus in item.industry">{{indus}}&nbsp;&nbsp;</span></h4>
                         <span ng-switch on="item.rating">
-                            <span ng-switch-when="10"><img ng-src="../img/stars.png" /></span> 
-                            <span ng-switch-when="5"><img ng-src="../img/stars1.png" /></span>
-                            <span ng-switch-when="8"><img ng-src="../img/stars5.png" /></span>
-                            <span ng-switch-when="6"><img ng-src="../img/stars2.png" /></span>
+                            <span
+					ng-switch-when="5"><img ng-src="../img/stars.png" /></span> <span
+					ng-switch-when="4"><img ng-src="../img/stars4.png" /></span> <span
+					ng-switch-when="3"><img ng-src="../img/stars3.png" /></span> <span
+					ng-switch-when="2"><img ng-src="../img/stars2.png" /></span><span
+					ng-switch-when="1"><img ng-src="../img/stars1.png" /></span><span
+					ng-switch-when="0"><img ng-src="../img/stars5.png" /></span>
                         </span>
                     </div>
 

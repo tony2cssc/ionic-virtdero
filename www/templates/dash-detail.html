@@ -10,7 +10,8 @@
 	class="padding">
 <div class="list list_item ">
 	<div class="item item-avatar1">
-		<img ng-src="{{solution.soln_icon}}">
+      <img ng-src="{{solution.soln_icon}}" ng-if="solution.soln_icon != 'appicon.png' ">
+		<img src="./img/appicon.png" ng-if="solution.soln_icon == 'appicon.png'">
 		<div class="row detail_row">
 			<div class="col">
 				<h2>{{solution.soln_name}}</h2>
