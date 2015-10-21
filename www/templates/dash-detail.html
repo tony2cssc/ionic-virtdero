@@ -82,7 +82,7 @@
 			</div>
 			<div class="col col-center">{{doc.name}}</div>
 			<div class="col col-center col_d">
-				<button class="button button_d">Download</button>
+				<button class="button button_d" ng-click="download_file(doc.url)">Download</button>
 			</div>
 		</div>
 		<div class="line"></div>
@@ -96,7 +96,7 @@
 			</div>
 			<div class="col col-center">{{video.name}}</div>
 			<div class="col col-center col_d">
-				<button class="button button_d">Download</button>
+				<button class="button button_d" ng-click="download_file(video.url)">Download</button>
 			</div>
 		</div>
 

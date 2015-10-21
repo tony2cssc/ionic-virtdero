@@ -27,6 +27,12 @@ angular.module('starter.dash.detail', []).controller('DashDetailCtrl',
 			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 				flexslider_show();
 			});
+			
+			$scope.download_file=function(target){
+				window.open(target,'_self');
+				//window.location = target;
+				//location.href=target;
+				};
 
 		}).directive('onFinishRender', function($timeout) {
 	return {
