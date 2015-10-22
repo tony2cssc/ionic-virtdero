@@ -141,18 +141,25 @@
     {
       "id": 5,
       "app_version": "1.0",
-      "size": 16.5,
-      "avbl_on_devices": [
-        "iphone",
-        "ipad",
-        "apple watch",
-        "android",
-        "android pad"
+      "size": {
+        "android": 3.12,
+        "android_pad": 0,
+        "iphone": 0,
+        "ipad": 0,
+        "win_phone": 0,
+        "win_pad": 0
+      },
+      "device_type": [
+        "iPhone",
+        "Android"
       ],
-      "avbl_on_oses": [
-        "ios",
-        "android",
-        "windows phone"
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "languages": [
+        "English",
+        "简体中文"
       ],
       "created_at": {
         "date": 4,
@@ -165,13 +172,17 @@
         "timezoneOffset": -480,
         "year": 115
       },
-      "description": "惠普公司（Hewlett-Packard Development Company, L.P.，简称HP）总部位于美国加利福尼亚州的帕罗奥多（Palo Alto），是一家全球性的资讯科技公司，主要专注于打印机、数码影像、软件、计算机与资讯服务等业务。惠普（HP）是世界最大的信息科技（IT）公司之一，成立于1939年，总部位于美国加利福尼亚州帕洛阿尔托市。惠普下设三大业务集团：信息产品集团、打印及成像系统集团和企业计算及专业服务集团.",
-      "download_url": "images/login_banner_zh_CN.png",
+      "description": "HP Event is more than an app for organizing or attending the events.<br/> It provides rich features to help organizor to manage event contents like <br/>      <ul>      <li> attendees'list,</li>      <li> speakers' list,</li>      <li> agenda,</li>      <li> logistics, presentations etc.</li>      </ul>       It also helps the attendees to get the updated information through single channel and avoid the confusion caused by different information channels like mails, fax, SMS as they cannot tell which ones are the latest.",
+      "download_url": {
+        "android": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/hpmeeting.apk",
+        "android_pad": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/hpmeeting.apk",
+        "iphone": "itms-services://?action=download-manifest&url=https://dn-reeli.qbox.me/hpmeeting.plist",
+        "ipad": "itms-services://?action=download-manifest&url=https://dn-reeli.qbox.me/hpmeeting.plist",
+        "win_phone": "",
+        "win_pad": ""
+      },
       "industry": [
-        "General",
-        "CME",
-        "Sports",
-        "Amusement"
+        "General"
       ],
       "modified_at": {
         "date": 4,
@@ -184,21 +195,41 @@
         "timezoneOffset": -480,
         "year": 115
       },
-      "rating": 10,
+      "rating": 5,
       "soln_docs": [
-        "doc/abc.doc",
-        "doc/abc.doc"
+        {
+          "name": "S-MBL-01 HP Smart Event [1 Page]",
+          "url": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/S-MBL-01%20HP%20Smart%20Event%20[1%20Page].pdf",
+          "size": 0.29
+        },
+        {
+          "name": "HP Event 1-page Brief",
+          "url": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/HP%20Event%201-page%20Brief.pdf",
+          "size": 0.24
+        },
+        {
+          "name": "Smart Meeting Client Facing Presentation",
+          "url": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/Smart%20Meeting%20Client%20Facing%20Presentation.pdf",
+          "size": 1.77
+        }
       ],
-      "soln_icon": "appicon.png",
+      "soln_icon": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/icon_hp_event.png",
       "soln_id": "S-MBL-05",
       "soln_name": "HP Event",
       "soln_images": [
-        "img/pin.jpg",
-        "img/welcome.jpg"
+        "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/login.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/homepage.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/menu.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/participants.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/materials.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/online_chatting.png"
       ],
       "soln_videos": [
-        "video/1.mp4",
-        "video/1.mp4"
+        {
+          "name": "HP Event Introduction.MP4",
+          "url": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/HP%20Event%20Introduction.MP4",
+          "size": 5.11
+        }
       ]
     }
   ]

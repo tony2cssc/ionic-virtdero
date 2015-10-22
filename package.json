@@ -2,6 +2,9 @@
   "name": "ionic-virtdero",
   "version": "1.0.0",
   "description": "ionic-virtdero: An Ionic project",
+  "scripts": {
+    "json-server": "./node_modules/.bin/json-server --watch db.json"
+  },
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
