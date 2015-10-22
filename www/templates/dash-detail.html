@@ -4,14 +4,13 @@
     The FriendsCtrl pulls data from the Friends service (service.js)
     The Friends service returns an array of friend data
   -->
-<link rel="stylesheet" type="text/css" href="../js/lib/flexslider.css" />
 <ion-view view-title="{{solution.soln_name}}">
  <ion-content
 	class="padding">
 <div class="list list_item ">
 	<div class="item item-avatar1">
       <img ng-src="{{solution.soln_icon}}" ng-if="solution.soln_icon != 'appicon.png' ">
-		<img src="./img/appicon.png" ng-if="solution.soln_icon == 'appicon.png'">
+		<img src="img/appicon.png" ng-if="solution.soln_icon == 'appicon.png'">
 		<div class="row detail_row">
 			<div class="col">
 				<h2>{{solution.soln_name}}</h2>
@@ -21,12 +20,12 @@
 					</span>
 				</h3>
 				<span ng-switch on="solution.rating"> <span
-					ng-switch-when="5"><img ng-src="../img/stars.png" /></span> <span
-					ng-switch-when="4"><img ng-src="../img/stars4.png" /></span> <span
-					ng-switch-when="3"><img ng-src="../img/stars3.png" /></span> <span
-					ng-switch-when="2"><img ng-src="../img/stars2.png" /></span><span
-					ng-switch-when="1"><img ng-src="../img/stars1.png" /></span><span
-					ng-switch-when="0"><img ng-src="../img/stars5.png" /></span>
+					ng-switch-when="5"><img ng-src="img/stars.png" /></span> <span
+					ng-switch-when="4"><img ng-src="img/stars4.png" /></span> <span
+					ng-switch-when="3"><img ng-src="img/stars3.png" /></span> <span
+					ng-switch-when="2"><img ng-src="img/stars2.png" /></span><span
+					ng-switch-when="1"><img ng-src="img/stars1.png" /></span><span
+					ng-switch-when="0"><img ng-src="img/stars5.png" /></span>
 				</span>
 				<h3 class="title_h">
 					Solution Owner: <a id="email">e-mail@xxxx.com</a>
@@ -79,7 +78,7 @@
 	<div class="list" ng-repeat="doc in solution.soln_docs">
 		<div class="row">
 			<div class="col">
-				<img ng-src="../img/book.jpg" class="book_s" />
+				<img ng-src="img/book.jpg" class="book_s" />
 			</div>
 			<div class="col col-center">{{doc.name}}</div>
 			<div class="col col-center col_d">
@@ -93,7 +92,7 @@
 	<div class="list" ng-repeat="video in solution.soln_videos">
 		<div class="row">
 			<div class="col">
-				<img ng-src="../img/book.jpg" class="book_s" />
+				<img ng-src="img/book.jpg" class="book_s" />
 			</div>
 			<div class="col col-center">{{video.name}}</div>
 			<div class="col col-center col_d">

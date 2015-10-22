@@ -1,23 +1,22 @@
 
-<link rel="stylesheet" type="text/css" href="../js/lib/flexslider.css" />
 <ion-view view-title="Virtual Demo Room">
   <ion-nav-buttons side="secondary">
       
     <a href="#/tab/seach" class=" button button-icon icon ion-search" ></a>    
   </ion-nav-buttons>
   <ion-nav-title>
-    <img ng-src="./img/logo.png" height="75%" style="vertical-align: middle">
+    <img ng-src="img/logo.png" height="75%" style="vertical-align: middle">
     Virtual Demo Room
 
   </ion-nav-title>
 
   <ion-content class="padding">
-    <div><img ng-src="./img/topic.jpg" width="100%"/></div>
+    <div><img ng-src="img/topic.jpg" width="100%"/></div>
     <div class="list">
         <div ng-repeat="item in solutions ">
             <a  href="#/tab/dash/{{item.id}}" class="item item-thumbnail-left" type="item-text-wrap">
                 <img ng-src="{{item.soln_icon}}" alt="ICON"  ng-if="item.soln_icon != 'appicon.png' "/>
-                <img ng-src="./img/appicon.png" alt="ICON"  ng-if="item.soln_icon == 'appicon.png' "/>
+                <img ng-src="img/appicon.png" alt="ICON"  ng-if="item.soln_icon == 'appicon.png' "/>
                 <div class="row">
                     <div class="col">
                         <h2>{{item.soln_name}}</h2>
@@ -25,12 +24,12 @@
                         <h4><span ng-repeat="indus in item.industry">{{indus}}&nbsp;&nbsp;</span></h4>
                         <span ng-switch on="item.rating">
                             <span
-					ng-switch-when="5"><img ng-src="../img/stars.png" /></span> <span
-					ng-switch-when="4"><img ng-src="../img/stars4.png" /></span> <span
-					ng-switch-when="3"><img ng-src="../img/stars3.png" /></span> <span
-					ng-switch-when="2"><img ng-src="../img/stars2.png" /></span><span
-					ng-switch-when="1"><img ng-src="../img/stars1.png" /></span><span
-					ng-switch-when="0"><img ng-src="../img/stars5.png" /></span>
+					ng-switch-when="5"><img ng-src="img/stars.png" /></span> <span
+					ng-switch-when="4"><img ng-src="img/stars4.png" /></span> <span
+					ng-switch-when="3"><img ng-src="img/stars3.png" /></span> <span
+					ng-switch-when="2"><img ng-src="img/stars2.png" /></span><span
+					ng-switch-when="1"><img ng-src="img/stars1.png" /></span><span
+					ng-switch-when="0"><img ng-src="img/stars5.png" /></span>
                         </span>
                     </div>
 
