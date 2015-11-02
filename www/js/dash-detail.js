@@ -1,5 +1,5 @@
-angular.module('starter.dash.detail', []).controller('DashDetailCtrl',
-		function($scope, $stateParams, Solutions) {
+angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl',
+		function($scope, $stateParams, Solutions,$timeout,$cordovaFileTransfer,$ionicLoading,$cordovaInAppBrowser, $cordovaFileOpener2) {
 			$scope.more = {
 				'show' : true
 			};
@@ -27,13 +27,53 @@ angular.module('starter.dash.detail', []).controller('DashDetailCtrl',
 			$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 				flexslider_show();
 			});
-			
-			$scope.download_file=function(target){
-				window.open(target,'_self');
-				//window.location = target;
+
+			$scope.download_file=function(url,event){
+        //window.open(url,'_self');
+				//window.location = url;
 				//location.href=target;
+
+       /* example for file-transfer  plugin*/
+        document.addEventListener('deviceready', function () {
+
+          var targetPath = cordova.file.externalRootDirectory + url.substr(url.lastIndexOf('/') + 1);
+          var trustHosts = true;
+          var options = {encodeURI: false};
+          $ionicLoading.show({
+            template: 'Downloding...'
+          })
+          $cordovaFileTransfer.download(url, targetPath, options, trustHosts)
+            .then(function (result) {
+              // Success!
+              $cordovaFileOpener2.open(
+                decodeURI(targetPath),
+                'application/pdf'
+              ).then(function() {
+                  // file opened successfully
+                  alert(' file opened successfully');
+                }, function(e) {
+                  // An error occurred. Show a message to the user
+                  alert('Error status: ' + e.status + ' - Error message: ' + e.message);
+                });
+
+            }, function (error) {
+              // Error
+              alert('source ' + error.source + " target " + error.target + " code " + error.code + " http_status " + error.http_status);
+            }, function (progress) {
+              $timeout(function () {
+                $ionicLoading.hide();
+                event.target.innerHTML = parseInt((progress.loaded / progress.total) * 100)+"%";
+              })
+            });
+
+
+        }, false);
 				};
 
+      $scope.download_apk=function(url){
+       alert("download_apk");
+       // window.open(url,"_system","location=yes,enableViewportScale=yes,hidden=no");
+      }
 		}).directive('onFinishRender', function($timeout) {
 	return {
 		restrict : 'A',
