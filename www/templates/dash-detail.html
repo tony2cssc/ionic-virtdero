@@ -55,18 +55,18 @@
 	</div>
 	<h4 id="description" ng-bind-html="solution.description"></h4>
 	<h4 class="title_h">
-		OSES:<span ng-repeat="ose in solution.platforms">{{ose}} <span
+    <span class="emphasize">OSES:</span><span ng-repeat="ose in solution.platforms">{{ose}} <span
 			ng-if="ose != solution.platforms[solution.platforms.length-1]">,</span>
 		</span>
 	</h4>
 	<h4 class="title_h">
-		Devices:<span ng-repeat="dev in solution.device_type">{{dev}}
+    <span class="emphasize">Devices:</span><span ng-repeat="dev in solution.device_type">{{dev}}
 			<span
 			ng-if="dev != solution.device_type[solution.device_type.length-1]">,</span>
 		</span>
 	</h4>
 	<h4 class="title_h">
-		Supported Language:<span ng-repeat="language in solution.languages">{{language}}
+    <span class="emphasize">Supported Language:</span><span ng-repeat="language in solution.languages">{{language}}
 			<span
 			ng-if="language != solution.languages[solution.languages.length-1]">,</span>
 		</span>
@@ -96,7 +96,7 @@
 			</div>
 			<div class="col col-center">{{video.name}}</div>
 			<div class="col col-center col_d">
-				<button class="button button_d" ng-click="download_file(video.url,$event)">Download</button>
+        <button class="button button_d" ng-click="download_videos(video.url,$event)">Download</button>
 			</div>
 		</div>
 

@@ -1,11 +1,14 @@
-
 .button_download_dash {
-            float:right;
-            margin-right:20px;
-            margin-top:-70px;       
-            z-index: 500;
-          }
+  float: right;
+  margin-right: 20px;
+  margin-top: -70px;
+  z-index: 500;
+}
 
-.buttons-left,.left-buttons,.item-input{
-    width:100%;
+.buttons-left, .left-buttons, .item-input {
+  width: 100%;
+}
+
+.solution_row {
+  width: 70%;
 }

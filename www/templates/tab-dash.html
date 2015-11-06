@@ -1,12 +1,11 @@
-
-<ion-view view-title="Virtual Demo Room">
+<ion-view view-title="Hoop">
   <ion-nav-buttons side="secondary">
-      
-    <a href="#/tab/seach" class=" button button-icon icon ion-search" ></a>    
+
+    <a href="#/seach" class=" button button-icon icon ion-search"></a>
   </ion-nav-buttons>
   <ion-nav-title>
     <img ng-src="img/logo.png" height="75%" style="vertical-align: middle">
-    Virtual Demo Room
+    Hoop
 
   </ion-nav-title>
 
@@ -17,7 +16,8 @@
             <a  href="#/tab/dash/{{item.id}}" class="item item-thumbnail-left" type="item-text-wrap">
                 <img ng-src="{{item.soln_icon}}" alt="ICON"  ng-if="item.soln_icon != 'appicon.png' "/>
                 <img ng-src="img/appicon.png" alt="ICON"  ng-if="item.soln_icon == 'appicon.png' "/>
-                <div class="row">
+
+              <div class="row solution_row">
                     <div class="col">
                         <h2>{{item.soln_name}}</h2>
                         <!--<img ng-src="../img/stars.png" />-->
@@ -35,10 +35,11 @@
 
                 </div>
             </a>
-            <div >              
+
+          <div>
                 <button class="button button-small button-stable button_download_dash">
                     Download&nbsp;&nbsp;<span ng-if="currentPlatform =='android'">{{solution.size.android}}</span><span ng-if="currentPlatform =='ios'">{{solution.size.iphone}}</span>
-                </button>   
+                </button>
             </div>
         </div>
     </div>

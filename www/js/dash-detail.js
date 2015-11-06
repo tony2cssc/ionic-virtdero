@@ -39,12 +39,15 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
         if ($rootScope.currentPlatform == 'android') {
           directory = cordova.file.externalRootDirectory;
         }
-        var targetPath = directory + url.substr(url.lastIndexOf('/') + 1);
+        var file_name = url.substr(url.lastIndexOf('/') + 1);
+        var targetPath = directory + file_name;
+
         var trustHosts = true;
         var options = {encodeURI: false};
         $ionicLoading.show({
           template: 'Downloding...'
         })
+
         $cordovaFileTransfer.download(url, targetPath, options, trustHosts)
           .then(function (result) {
             // Success!
@@ -70,15 +73,37 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
             $timeout(function () {
               $ionicLoading.hide();
               //  if(event.target.innerHTML != "100%"){
-              event.target.innerHTML = parseInt((progress.loaded / progress.total) * 100) + "%";
+              // event.target.innerHTML = parseInt((progress.loaded / progress.total) * 100) + "%";
               // }
             })
           });
       }, false);
     };
 
+    $scope.download_videos = function (url) {
+      window.open(url, "_system", "location=yes,enableViewportScale=yes,hidden=no");
+      //window.open(url,'_self');
+    }
+
     $scope.download_apk = function (url) {
-      alert("download_apk");
+      /*     alert("download_apk");
+
+       /!* example for local-notifications  plugin*!/
+       document.addEventListener('deviceready', function () {
+       $cordovaLocalNotification.schedule({
+       id: 1,
+       title: 'Title here111',
+       text: 'Text here1111',
+       at: new Date()
+       // every:'second'
+       // led: "FF0000"
+       }).then(function (result) {
+       // ...
+       alert('$cordovaLocalNotification.schedule');
+       });
+
+
+       }, false);*/
       // window.open(url,"_system","location=yes,enableViewportScale=yes,hidden=no");
 
     }

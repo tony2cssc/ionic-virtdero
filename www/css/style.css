@@ -64,7 +64,7 @@
 	margin-right:15px;
 }
 #down_img{
-	background:url(../img/down.png) no-repeat ;	
+	background:url(../img/down.png) no-repeat ;
 }
 #up_img{
 	background:url(../img/up.png) no-repeat ;
@@ -79,7 +79,7 @@
 .img_wrap{
 	width:100%;
 	overflow:hidden;
-}	
+}
 .img_show{
 	width:111111111150%;
 }
@@ -96,4 +96,8 @@
 }
 #description,.title_h{
 	color:#787777;
+}
+
+.emphasize {
+  color: #000;
 }
