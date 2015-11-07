@@ -2,144 +2,79 @@
   "solutions": [
     {
       "id": 1,
+      "app_version": "1.0",
+      "size": {
+        "android": 0,
+        "android_pad": 0,
+        "iphone": 0,
+        "ipad": 0,
+        "win_phone": 0,
+        "win_pad": 0
+      },
+      "device_type": [
+        "All"
+      ],
+      "platforms": [
+        "All"
+      ],
+      "languages": [
+        "English"
+      ],
       "created_at": {
         "date": 4,
-        "day": 0,
+        "day": 4,
         "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590730,
+        "minutes": 17,
+        "month": 11,
+        "seconds": 6,
+        "time": 1443964626882,
         "timezoneOffset": -480,
         "year": 115
       },
-      "download_url": "images/login_banner_zh_CN.png",
+      "description": "HP Mobility Advisory Services help clients develop mobile strategy and road maps to transform interactions with customers, employees, and partners. Our services help clients identify business goals, form a mobile strategy, and implement the steps needed for success.",
+      "download_url": {
+        "android": "",
+        "android_pad": "",
+        "iphone": "",
+        "ipad": "",
+        "win_phone": "",
+        "win_pad": ""
+      },
       "industry": [
         "General"
       ],
       "modified_at": {
         "date": 4,
-        "day": 0,
+        "day": 4,
         "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
+        "minutes": 17,
+        "month": 11,
+        "seconds": 6,
+        "time": 1443964626882,
         "timezoneOffset": -480,
         "year": 115
       },
       "rating": 5,
+      "soln_docs": [
+        {
+          "name": "mobility-advisory-services",
+          "url": "http://7xnjbj.com1.z0.glb.clouddn.com/advisory/mobility-advisory-services-client-presentation-english.pdf",
+          "size": 2.19
+        },
+        {
+          "name": "Services Offering Overview",
+          "url": "http://7xnjbj.com1.z0.glb.clouddn.com/advisory/Mobility%20Advisory%20Services%20Offering%20Overview.pdf",
+          "size": 1.05
+        }
+      ],
       "soln_icon": "appicon.png",
-      "soln_name": "HP Smart Event",
-      "soln_id": "S-MBL-01",
-      "size": 16.5
+      "soln_id": "S-MBL-05",
+      "soln_name": "Mobility Advisory Services",
+      "soln_images": [],
+      "soln_videos": []
     },
     {
       "id": 2,
-      "created_at": {
-        "date": 4,
-        "day": 0,
-        "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
-        "timezoneOffset": -480,
-        "year": 115
-      },
-      "download_url": "images/login_banner_zh_CN.png",
-      "industry": [
-        "General",
-        "CME"
-      ],
-      "modified_at": {
-        "date": 4,
-        "day": 0,
-        "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
-        "timezoneOffset": -480,
-        "year": 115
-      },
-      "rating": 5,
-      "soln_icon": "appicon.png",
-      "soln_name": "HP Smart Event",
-      "soln_id": "S-MBL-02",
-      "size": 16.5
-    },
-    {
-      "id": 3,
-      "created_at": {
-        "date": 4,
-        "day": 0,
-        "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
-        "timezoneOffset": -480,
-        "year": 115
-      },
-      "download_url": "images/login_banner_zh_CN.png",
-      "industry": [
-        "General",
-        "Health Care"
-      ],
-      "modified_at": {
-        "date": 4,
-        "day": 0,
-        "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
-        "timezoneOffset": -480,
-        "year": 115
-      },
-      "rating": 8,
-      "soln_icon": "appicon.png",
-      "soln_name": "HP Smart Event",
-      "soln_id": "S-MBL-03",
-      "size": 16.5
-    },
-    {
-      "id": 4,
-      "created_at": {
-        "date": 4,
-        "day": 0,
-        "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
-        "timezoneOffset": -480,
-        "year": 115
-      },
-      "download_url": "images/login_banner_zh_CN.png",
-      "industry": [
-        "General"
-      ],
-      "modified_at": {
-        "date": 4,
-        "day": 0,
-        "hours": 21,
-        "minutes": 16,
-        "month": 9,
-        "seconds": 30,
-        "time": 1443964590731,
-        "timezoneOffset": -480,
-        "year": 115
-      },
-      "rating": 6,
-      "soln_icon": "appicon.png",
-      "soln_name": "HP Smart Event",
-      "soln_id": "S-MBL-04",
-      "size": 16.5
-    },
-    {
-      "id": 5,
       "app_version": "1.0",
       "size": {
         "android": 3.12,
@@ -163,16 +98,16 @@
       ],
       "created_at": {
         "date": 4,
-        "day": 0,
+        "day": 4,
         "hours": 21,
         "minutes": 17,
-        "month": 9,
+        "month": 11,
         "seconds": 6,
         "time": 1443964626882,
         "timezoneOffset": -480,
         "year": 115
       },
-      "description": "HP Event is more than an app for organizing or attending the events.<br/> It provides rich features to help organizor to manage event contents like <br/>      <ul>      <li> attendees'list,</li>      <li> speakers' list,</li>      <li> agenda,</li>      <li> logistics, presentations etc.</li>      </ul>       It also helps the attendees to get the updated information through single channel and avoid the confusion caused by different information channels like mails, fax, SMS as they cannot tell which ones are the latest.",
+      "description": "HP Event is more than an app for organizing or attending the events. It provides rich features to help organizor to manage event contents like attendees'list, speakers' list, agenda, logistics, presentations etc. It also helps the attendees to get the updated information through single channel and avoid the confusion caused by different information channels like mails, fax, SMS as they cannot tell which ones are the latest.",
       "download_url": {
         "android": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/hpmeeting.apk",
         "android_pad": "http://7xnjbj.com1.z0.glb.clouddn.com/hpevent/hpmeeting.apk",
@@ -186,10 +121,10 @@
       ],
       "modified_at": {
         "date": 4,
-        "day": 0,
+        "day": 4,
         "hours": 21,
         "minutes": 17,
-        "month": 9,
+        "month": 11,
         "seconds": 6,
         "time": 1443964626882,
         "timezoneOffset": -480,
@@ -231,6 +166,145 @@
           "size": 5.11
         }
       ]
+    },
+    {
+      "id": 3,
+      "app_version": "2.0",
+      "size": {
+        "android": 8,
+        "android_pad": 0,
+        "iphone": 0,
+        "ipad": 0,
+        "win_phone": 0,
+        "win_pad": 0
+      },
+      "device_type": [
+        "iPhone",
+        "Android"
+      ],
+      "platforms": [
+        "Android 2.3.3 and up",
+        "iOS 6.1"
+      ],
+      "languages": [
+        "English"
+      ],
+      "created_at": {
+        "date": 4,
+        "day": 4,
+        "hours": 21,
+        "minutes": 17,
+        "month": 11,
+        "seconds": 6,
+        "time": 1443964626882,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "description": "SPOKES is a mobile app which allows anyone in HP to contextually search and connect with colleagues who can help them immediately at the moment of their need. SPOKES means the “rods or wires, connecting the edge of the wheel to its core, making the whole structure stronger”. Our app and team aims to democratize information to enable people to find and connect with each other.",
+      "download_url": {
+        "android": "",
+        "android_pad": "",
+        "iphone": "",
+        "ipad": "",
+        "win_phone": "",
+        "win_pad": ""
+      },
+      "industry": [
+        "General"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 4,
+        "hours": 21,
+        "minutes": 17,
+        "month": 11,
+        "seconds": 6,
+        "time": 1443964626882,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 5,
+      "soln_docs": [],
+      "soln_icon": "http://7xnjbj.com1.z0.glb.clouddn.com/spokes/ICON-SPOKES_512x512.png",
+      "soln_id": "S-MBL-05",
+      "soln_name": "SPOKES APP",
+      "soln_images": [
+        "http://7xnjbj.com1.z0.glb.clouddn.com/spokes/NEW-Profile1.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/spokes/NEW-Profile2.png",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/spokes/IMG_9967.PNG",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/spokes/IMG_9958.PNG",
+        "http://7xnjbj.com1.z0.glb.clouddn.com/spokes/IMG_9955.PNG"
+      ],
+      "soln_videos": []
+    },
+    {
+      "id": 4,
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 6,
+      "soln_icon": "appicon.png",
+      "soln_name": "HP Smart Event",
+      "soln_id": "S-MBL-04",
+      "size": 16.5
+    },
+    {
+      "id": 5,
+      "created_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "download_url": "images/login_banner_zh_CN.png",
+      "industry": [
+        "General",
+        "CME"
+      ],
+      "modified_at": {
+        "date": 4,
+        "day": 0,
+        "hours": 21,
+        "minutes": 16,
+        "month": 9,
+        "seconds": 30,
+        "time": 1443964590731,
+        "timezoneOffset": -480,
+        "year": 115
+      },
+      "rating": 5,
+      "soln_icon": "appicon.png",
+      "soln_name": "HP Smart Event",
+      "soln_id": "S-MBL-02",
+      "size": 16.5
     }
   ]
 }
