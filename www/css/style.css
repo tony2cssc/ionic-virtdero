@@ -101,3 +101,49 @@
 .emphasize {
   color: #000;
 }
+
+/*
+category all page*/
+.bar-header .button_b, .category_content, .button-clear.button_by {
+  color: #11ADDC;
+}
+
+.by_title {
+  line-height: 47px;
+  font-size: 18px;
+}
+
+.category_content .row .col {
+  text-align: center;
+}
+
+.category_content .row .col:first-child {
+  border-right: 1px #ddd solid;
+  border-bottom: 1px #ddd solid;
+}
+
+.category_content .row .col:last-child {
+  border-bottom: 1px #ddd solid;
+}
+
+.category_content .row .col {
+  cursor: pointer;
+}
+
+.category_content .row_last .col:first-child, .category_content .row_last .col:last-child {
+  border-bottom: none;
+}
+
+.line_category {
+  border-top: 1px #80D6EA solid;
+  margin: 10px 0;
+}
+
+.logo_s {
+  vertical-align: middle;
+  height: 75%;
+}
+
+.bar .title {
+  margin: 0;
+}

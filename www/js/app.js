@@ -23,8 +23,23 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers',
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
+    /*// show tabs on the bottom
+     $ionicConfigProvider.platform.ios.tabs.style('standard');
+     $ionicConfigProvider.platform.ios.tabs.position('bottom');
+     $ionicConfigProvider.platform.android.tabs.style('standard');
+     $ionicConfigProvider.platform.android.tabs.position('standard');
+
+     $ionicConfigProvider.platform.ios.navBar.alignTitle('center');
+     $ionicConfigProvider.platform.android.navBar.alignTitle('left');
+
+     $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios-arrow-thin-left');
+     $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');
+
+     $ionicConfigProvider.platform.ios.views.transition('ios');
+     $ionicConfigProvider.platform.android.views.transition('android');*/
+    $ionicConfigProvider.navBar.alignTitle('center');
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
@@ -59,13 +74,13 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers',
 		  }
 		}
 	  })
-	
-  .state('tab.chats', {
-      url: '/chats',
+
+    .state('tab.categories', {
+      url: '/categories',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-categories': {
+          templateUrl: 'templates/tab-categories.html',
+          controller: 'CategoriesCtrl'
         }
       }
     })
@@ -89,15 +104,12 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers',
     }
   })
 
-  .state('tab.seach', {
+    .state('seach', {
       url: '/seach',
-      views: {
-          'tab-dash': {
-              templateUrl: 'templates/tab-seach.html',
-            
-          }
-      }
-  });
+
+      templateUrl: 'templates/tab-seach.html',
+
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
