@@ -1,5 +1,5 @@
 angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl',
-  function ($scope, $stateParams, Solutions, $timeout, $cordovaFileTransfer, $ionicLoading, $cordovaFileOpener2, $rootScope) {
+  function ($scope, $stateParams, Solutions, $timeout, $cordovaFileTransfer, $ionicLoading, $cordovaFileOpener2, $rootScope, $cordovaLocalNotification) {
     $scope.more = {
       'show': true
     };
@@ -86,24 +86,31 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
     }
 
     $scope.download_apk = function (url) {
-      /*     alert("download_apk");
 
-       /!* example for local-notifications  plugin*!/
-       document.addEventListener('deviceready', function () {
-       $cordovaLocalNotification.schedule({
-       id: 1,
-       title: 'Title here111',
-       text: 'Text here1111',
-       at: new Date()
-       // every:'second'
-       // led: "FF0000"
-       }).then(function (result) {
-       // ...
-       alert('$cordovaLocalNotification.schedule');
-       });
+      document.addEventListener('deviceready', function () {
+        /* example for local-notifications  plugin*/
+        $cordovaLocalNotification.schedule({
+          id: 1,
+          title: 'Title local-notifications',
+          text: 'Text local-notifications',
+          at: new Date()
+          // every:'second'
+          // led: "FF0000"
+        }).then(function (result) {
+          // ...
+        });
 
-
-       }, false);*/
+        /* example for InAppBrowser  plugin*/
+        cordova.InAppBrowser.open(url, '_system')
+          .then(function (event) {
+            // success
+          })
+          .catch(function (event) {
+            // error
+            alert('download_apk failed ,url:' + url);
+          });
+        //  $cordovaInAppBrowser.close();
+      }, false);
       // window.open(url,"_system","location=yes,enableViewportScale=yes,hidden=no");
 
     }
