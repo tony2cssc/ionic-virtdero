@@ -1,4 +1,12 @@
 {
   "name": "ionic-virtdero",
-  "app_id": "5e721507"
+  "app_id": "5e721507",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }
