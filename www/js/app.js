@@ -84,15 +84,6 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers',
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
   .state('tab.account', {
     url: '/account',
@@ -106,9 +97,8 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers',
 
     .state('seach', {
       url: '/seach',
-
       templateUrl: 'templates/tab-seach.html',
-
+      controller: 'SearchCtrl'
     });
 
   // if none of the above states are matched, use this as the fallback

@@ -28,6 +28,9 @@
       "id": "cordova-plugin-file-opener2"
     },
     "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-splashscreen",
+    "com.ionic.keyboard",
     "cordova-plugin-file-transfer",
     "cordova-plugin-file",
     "cordova-plugin-inappbrowser",
