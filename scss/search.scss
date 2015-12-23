@@ -1,3 +1,17 @@
-.buttons-left, .left-buttons, .item-input {
+.search-label {
   width: 100%;
+}
+
+.search-bar {
+  .buttons-left {
+    @extend .search-label;
+    .left-buttons {
+      @extend .search-label;
+    }
+  }
+  .clear-button {
+    color: #bbb;
+    right: 5px;
+    position: absolute;
+  }
 }

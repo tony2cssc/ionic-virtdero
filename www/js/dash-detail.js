@@ -1,5 +1,5 @@
-angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl',
-  function ($scope, $stateParams, Solutions, $timeout, $cordovaFileTransfer, $ionicLoading, $cordovaFileOpener2, $rootScope, $cordovaLocalNotification) {
+angular.module('starter.dash.detail', ['ngCordova'])
+  .controller('DashDetailCtrl', ['$scope', 'Solution','$stateParams','$timeout','$cordovaFileTransfer','$ionicLoading','$cordovaFileOpener2','$rootScope', '$cordovaLocalNotification',function ($scope, Solution,$stateParams, $timeout, $cordovaFileTransfer, $ionicLoading, $cordovaFileOpener2, $rootScope, $cordovaLocalNotification) {
     $scope.more = {
       'show': true
     };
@@ -21,9 +21,8 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
       more_less(false);
     };
 
-    $scope.solution = Solutions.get({
-      solnId: $stateParams.id
-    });
+    $scope.solution = Solution.get({id: $stateParams.id});
+
     $scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
       flexslider_show();
     });
@@ -36,7 +35,7 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
       /* example for file-transfer  plugin*/
       document.addEventListener('deviceready', function () {
         var directory = cordova.file.documentsDirectory;
-        if ($rootScope.currentPlatform == 'android') {
+        if ($rootScope.currentPlatform.indexOf('android') >= 0) {
           directory = cordova.file.externalRootDirectory;
         }
         var file_name = url.substr(url.lastIndexOf('/') + 1);
@@ -55,6 +54,7 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
             if ((targetPath.toLowerCase()).indexOf('.mp4') > 0) {
               type = "video/mp4";
             }
+
             $cordovaFileOpener2.open(
               decodeURI(targetPath),
               type
@@ -69,6 +69,7 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
           }, function (error) {
             // Error
             alert('source ' + error.source + " target " + error.target + " code " + error.code + " http_status " + error.http_status);
+            $ionicLoading.hide();
           }, function (progress) {
             $timeout(function () {
               $ionicLoading.hide();
@@ -86,7 +87,7 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
     }
 
     $scope.download_apk = function (url) {
-
+     // window.open(url,"_system","location=yes,enableViewportScale=yes,hidden=no");
       document.addEventListener('deviceready', function () {
         /* example for local-notifications  plugin*/
         $cordovaLocalNotification.schedule({
@@ -111,10 +112,9 @@ angular.module('starter.dash.detail', ['ngCordova']).controller('DashDetailCtrl'
           });
         //  $cordovaInAppBrowser.close();
       }, false);
-      // window.open(url,"_system","location=yes,enableViewportScale=yes,hidden=no");
 
     }
-  }).directive('onFinishRender', function ($timeout) {
+  }]).directive('onFinishRender', function ($timeout) {
     return {
       restrict: 'A',
       link: function (scope, element, attr) {

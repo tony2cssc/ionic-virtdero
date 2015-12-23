@@ -9,7 +9,7 @@
 	class="padding">
 <div class="list list_item ">
 	<div class="item item-avatar1">
-      <img ng-src="{{solution.soln_icon}}" ng-if="solution.soln_icon != 'appicon.png' ">
+      <img ng-src="{{url+solution.soln_icon}}" ng-if="solution.soln_icon != 'appicon.png' ">
 		<img src="img/appicon.png" ng-if="solution.soln_icon == 'appicon.png'">
 		<div class="row detail_row">
 			<div class="col">
@@ -43,7 +43,7 @@
 		<div class="flexslider carousel">
 			<ul class="slides">
 				<li ng-repeat="image in solution.soln_images"
-					on-finish-render="ngRepeatFinished"><img ng-src="{{image}}" /></li>
+					on-finish-render="ngRepeatFinished"><img ng-src="{{url+image.url}}" /></li>
 			</ul>
 		</div>
 	</div>
@@ -55,7 +55,7 @@
 	</div>
 	<h4 id="description" ng-bind-html="solution.description"></h4>
 	<h4 class="title_h">
-    <span class="emphasize">OSES:</span><span ng-repeat="ose in solution.platforms">{{ose}} <span
+    <span class="emphasize">OSES:</span><span ng-repeat="ose in solution.platforms">{{ose.name}} {{toLowerCase(ose.name)}} <span
 			ng-if="ose != solution.platforms[solution.platforms.length-1]">,</span>
 		</span>
 	</h4>
@@ -82,7 +82,7 @@
 			</div>
 			<div class="col col-center">{{doc.name}}</div>
 			<div class="col col-center col_d">
-				<button class="button button_d" ng-click="download_file(doc.url,$event)" >Download</button>
+				<button class="button button_d" ng-click="download_file(url+doc.url,$event)" >Download</button>
 			</div>
 		</div>
 		<div class="line"></div>
@@ -96,7 +96,7 @@
 			</div>
 			<div class="col col-center">{{video.name}}</div>
 			<div class="col col-center col_d">
-        <button class="button button_d" ng-click="download_videos(video.url,$event)">Download</button>
+        <button class="button button_d" ng-click="download_videos(url+video.url,$event)">Download</button>
 			</div>
 		</div>
 
@@ -109,7 +109,8 @@
 </div>
 
 <div id="download_wrap">
-  <span ng-if="currentPlatform =='android'"><button class="button button-positive" ng-click="download_apk(solution.download_url.android)">Download&nbsp;&nbsp;({{solution.size.android}}MB)</button></span>
-	<span ng-if="currentPlatform =='ios'"><button class="button button-positive" ng-click="download_apk(solution.download_url.iphone)">Download&nbsp;&nbsp({{solution.size.iphone}}MB)</button></span>
+  <span ng-repeat="platforms in solution.platforms">
+  <span ng-if="currentPlatform == platforms.name.toLowerCase().trim()"><button class="button button-positive" ng-click="download_apk(url+platforms.url)">Download&nbsp;&nbsp;({{platforms.size}}MB)</button></span>
+  </span>
 </div>
 </ion-content> </ion-view>

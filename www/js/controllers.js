@@ -1,8 +1,6 @@
 angular.module('starter.controllers', [])
 
-  .controller('DashCtrl', ['$scope', 'Solutions','$rootScope',function ($scope, Solutions,$rootScope) {
-	 var currentPlatform = ionic.Platform.platform();
-	 $rootScope.currentPlatform = currentPlatform;
+  .controller('DashCtrl', ['$scope', 'Solutions', function ($scope, Solutions) {
     $scope.solutions = Solutions.query();
   }])
 
@@ -26,5 +24,10 @@ angular.module('starter.controllers', [])
     $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
       viewData.enableBack = true;
     });
+
+    $scope.searching = [{"item": ""}];
+    $scope.clearSearch = function () {
+      $scope.searching.item = '';
+    };
   })
 
