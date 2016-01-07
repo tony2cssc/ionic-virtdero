@@ -6,5 +6,5 @@ angular.module('starter.services', ['ngResource'])
   }])
 
   .factory('Solution', ['$resource','$rootScope', function($resource,$rootScope) {
-    return $resource($rootScope.url+'getSolutionById.do?');
+    return $resource($rootScope.url+'getSolutionById.do?id=:id');
   }])
